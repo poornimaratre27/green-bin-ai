@@ -52,8 +52,6 @@ GreenBin AI is a full-stack MERN application that uses Google's **Gemini API** t
 
 ## Screenshots
 
-> Add screenshots to `frontend/src/assets/screenshots/` and update the paths below.
-
 | Login | Dashboard |
 |---|---|
 | ![Login screenshot](frontend/src/assets/screenshots/login.png) | ![Dashboard screenshot](frontend/src/assets/screenshots/dashboard.png) |
