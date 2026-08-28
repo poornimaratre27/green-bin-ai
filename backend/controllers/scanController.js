@@ -18,7 +18,7 @@ export const analyzeScan = async (req, res) => {
     }
 
     const base64Image = req.file.buffer.toString('base64')
-    const result = await analyzeWasteImage(base64Image, req.file.mimetype)
+    const result = await analyzeWasteImage(base64Image, req.file.mimetype,req.file.originalname)
 
     const ext = path.extname(req.file.originalname) || '.jpg'
     const filename = `${Date.now()}-${crypto.randomUUID()}${ext}`

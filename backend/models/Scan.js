@@ -12,9 +12,12 @@ const scanSchema = new mongoose.Schema(
     wasteType: { type: String, required: true },
     confidence: { type: Number, required: true },
     recommendedBin: { type: String, required: true },
+    material: { type: String },
     description: { type: String, required: true },
     recyclable: { type: Boolean, required: true },
+    disposalSteps: [{ type: String }],
     environmentalImpact: { type: String, required: true },
+    ecoTip: { type: String },
     points: { type: Number, default: 10 }
   },
   { timestamps: true }

@@ -45,7 +45,8 @@ const WasteScanner = () => {
     try {
       const data = await analyzeWasteImage(file)
       setResult(data)
-      showToast(`Scan complete — +${data.points} Eco Points!`, 'success')
+      const pointsMsg = typeof data?.points === 'number' ? ` — +${data.points} Eco Points!` : '!'
+      showToast(`Scan complete${pointsMsg}`, 'success')
     } catch (err) {
       const message =
         err.response?.data?.message || (err.request ? 'Network error — please try again.' : 'Failed to analyze image')
